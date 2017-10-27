@@ -22,6 +22,12 @@ int bubble_sort(int *a, int n);
 // n = number of elements in the array
 int selection_sort(int *a, int n);
 
+
+// sorts the array a in place using insertion sort
+// *a = pointer to the input array
+// n = number of elements in the array
+int insertion_sort(int *a, int n);
+
 // swaps values at a and b
 // pointer to a
 // pointer to b

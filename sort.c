@@ -23,7 +23,7 @@ int main(int argc, char **argv){
   print_array(&a[0], sizeof(a)/sizeof(a[0]));
   printf("\n");
   
-  while ((c = getopt (argc, argv, "habc:")) != -1) {
+  while ((c = getopt (argc, argv, "habcc:")) != -1) {
     switch (c)
       {
       case 'a':
@@ -36,6 +36,12 @@ int main(int argc, char **argv){
         i = 1;
         printf("Executing Selection sort\n");
         selection_sort(&a[0], sizeof(a)/sizeof(a[0]));
+        break;
+
+      case 'c':
+        i = 1;
+        printf("Executing Selection sort\n");
+        insertion_sort(&a[0], sizeof(a)/sizeof(a[0]));
         break;
 
       case 'h':
