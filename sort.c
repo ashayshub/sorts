@@ -15,11 +15,15 @@ void help_opts(char *filename){
 }
 
 int main(int argc, char **argv){
-  int i = -1;
   int a[] = {1, 232, 4, 32, 24, 5, 6, 77, 22};
   char c;
 
-  printf("Input array follows\n");
+  if (argc != 2){
+    printf("Error: Check usage\n\n");
+    help_opts(argv[0]);
+    exit(1);
+  }
+    
   print_array(&a[0], sizeof(a)/sizeof(a[0]));
   printf("\n");
   
@@ -27,25 +31,21 @@ int main(int argc, char **argv){
     switch (c)
       {
       case 'a':
-        i = 1;
         printf("Executing Bubble sort\n");
         bubble_sort(&a[0], sizeof(a)/sizeof(a[0]));
         break;
         
       case 'b':
-        i = 1;
         printf("Executing Selection sort\n");
         selection_sort(&a[0], sizeof(a)/sizeof(a[0]));
         break;
 
       case 'c':
-        i = 1;
         printf("Executing Selection sort\n");
         insertion_sort(&a[0], sizeof(a)/sizeof(a[0]));
         break;
 
       case 'h':
-        i = 1;
         help_opts(argv[0]);
         exit(0);
         
@@ -55,12 +55,6 @@ int main(int argc, char **argv){
       }
   }
   
-  if (i == -1){
-    printf("Error: Input options are mandatory\n\n");
-    help_opts(argv[0]);
-    exit(1);
-  }
-    
   printf("\n");
   printf("Sorted list follows: \n");
   print_array(&a[0], sizeof(a)/sizeof(a[0]));
