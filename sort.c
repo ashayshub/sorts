@@ -28,6 +28,12 @@ int main(int argc, char **argv){
         bubble_sort(&a[0], sizeof(a)/sizeof(a[0]));
         break;
         
+      case 'b':
+        i = 1;
+        printf("Executing Selection sort\n");
+        selection_sort(&a[0], sizeof(a)/sizeof(a[0]));
+        break;
+
       case 'h':
         i = 1;
         help_opts(argv[0]);

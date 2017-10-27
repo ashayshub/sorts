@@ -12,6 +12,10 @@ void help_opts(char *filename);
 // n = number of elements in the array
 int bubble_sort(int *a, int n);
 
+// sorts the array a in place using selection sort
+// *a = pointer to the input array
+// n = number of elements in the array
+int selection_sort(int *a, int n);
 
 // swaps values at a and b
 // pointer to a
