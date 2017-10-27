@@ -18,6 +18,10 @@ int main(int argc, char **argv){
   int i = -1;
   int a[] = {1, 232, 4, 32, 24, 5, 6, 77, 22};
   char c;
+
+  printf("Input array follows\n");
+  print_array(&a[0], sizeof(a)/sizeof(a[0]));
+  printf("\n");
   
   while ((c = getopt (argc, argv, "habc:")) != -1) {
     switch (c)
@@ -52,16 +56,8 @@ int main(int argc, char **argv){
   }
     
   printf("\n");
-  printf("Input array follows\n");
-  for (int i=0; i < sizeof(a)/sizeof(a[0]); i++){
-    printf("%d\n", a[i]);
-  }
-
-  printf("\n");
-
   printf("Sorted list follows: \n");
-  for (int i=0; i < sizeof(a)/sizeof(a[0]); i++){
-    printf("%d\n", a[i]);
-  }
+  print_array(&a[0], sizeof(a)/sizeof(a[0]));
+  printf("\n");
   return errno;
 }

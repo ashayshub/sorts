@@ -7,6 +7,11 @@
 // pointer to the filename
 void help_opts(char *filename);
 
+// prints the contents of array
+// *a = pointer to the input array
+// n = number of elements in the array
+void print_array(int *a, int n);
+
 // sorts the array a in place using bubble sort
 // *a = pointer to the input array
 // n = number of elements in the array
