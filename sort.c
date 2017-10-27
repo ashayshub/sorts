@@ -23,7 +23,7 @@ int main(int argc, char **argv){
   print_array(&a[0], sizeof(a)/sizeof(a[0]));
   printf("\n");
   
-  while ((c = getopt (argc, argv, "habcc:")) != -1) {
+  while ((c = getopt (argc, argv, "habc")) != -1) {
     switch (c)
       {
       case 'a':
