@@ -1,4 +1,4 @@
-# Sorting algo implementations in C
+# Sorting algo implementations in Haskell
 
 Training on different sorting algorithms
 
