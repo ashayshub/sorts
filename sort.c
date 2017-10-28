@@ -1,7 +1,7 @@
 /*
  Author: Ashay Chitnis
  Date: 27 Oct 2017
- */
+*/
 
 #include "sort.h"
 
