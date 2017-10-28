@@ -10,12 +10,15 @@ void help_opts(char *filename){
   printf("options: a - bubble sort\n");
   printf("options: b - selection sort\n");
   printf("options: c - insertion sort\n");
+  printf("options: d - merge sort\n");
+  printf("options: e - quick sort\n");
+  printf("options: f - heap sort\n");
   printf("\n");
   printf("Example, help: %s -h\n", filename);
 }
 
 int main(int argc, char **argv){
-  int a[] = {1, 232, 4, 32, 24, 5, 6, 77, 22};
+  int a[] = {1, 232, 4, 32, 24, 5, 6, 77, -12, 22, -43};
   char c;
   int n = sizeof(a)/sizeof(a[0]);
   
@@ -26,10 +29,11 @@ int main(int argc, char **argv){
     exit(1);
   }
     
+  printf("Input array follows: \n");
   print_array(&a[0], n);
   printf("\n");
   
-  while ((c = getopt (argc, argv, "habc")) != -1) {
+  while ((c = getopt (argc, argv, "habcdef")) != -1) {
     switch (c)
       {
       case 'a':
@@ -43,7 +47,7 @@ int main(int argc, char **argv){
         break;
 
       case 'c':
-        printf("Executing Selection sort\n");
+        printf("Executing Insertion sort\n");
         insertion_sort(&a[0], n);
         break;
 
@@ -58,7 +62,7 @@ int main(int argc, char **argv){
   }
   
   printf("\n");
-  printf("Sorted list follows: \n");
+  printf("Sorted array follows: \n");
   print_array(&a[0], n);
   printf("\n");
   return errno;
