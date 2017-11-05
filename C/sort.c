@@ -51,6 +51,11 @@ int main(int argc, char **argv){
         insertion_sort(&a[0], n);
         break;
 
+      case 'd':
+        printf("Executing Insertion sort\n");
+        merge_sort(&a[0], 0, n);
+        break;
+
       case 'h':
         help_opts(argv[0]);
         exit(0);
